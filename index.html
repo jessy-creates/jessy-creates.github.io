@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Jessy Huang — Customer Support professional transitioning into Customer Success, SaaS, and AI Operations." />
+  <title>Jessy Huang | Customer Support → Customer Success & AI</title>
+  <style>
+    :root{
+      --bg:#f7f7f4;
+      --card:#ffffff;
+      --text:#1f2328;
+      --muted:#667085;
+      --line:#e7e7e2;
+      --accent:#3f5f4f;
+      --accent-soft:#e8efe9;
+      --max:980px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height:1.65;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:auto; padding:0 24px}
+    nav{
+      position:sticky; top:0; z-index:10;
+      backdrop-filter:blur(12px);
+      background:rgba(247,247,244,.88);
+      border-bottom:1px solid var(--line);
+    }
+    nav .wrap{
+      min-height:62px; display:flex; align-items:center; justify-content:space-between; gap:18px;
+    }
+    .brand{font-weight:750; text-decoration:none}
+    .navlinks{display:flex; gap:18px; flex-wrap:wrap; font-size:14px}
+    .navlinks a{text-decoration:none; color:var(--muted)}
+    .navlinks a:hover{color:var(--text)}
+    header{padding:86px 0 58px}
+    .hero{
+      display:grid; grid-template-columns:1.5fr .7fr; gap:42px; align-items:center;
+    }
+    .eyebrow{
+      display:inline-block; font-size:13px; font-weight:700; letter-spacing:.05em; text-transform:uppercase;
+      color:var(--accent); background:var(--accent-soft); padding:7px 10px; border-radius:999px;
+    }
+    h1{font-size:clamp(42px,7vw,72px); line-height:1.02; margin:18px 0 14px; letter-spacing:-.045em}
+    .headline{font-size:clamp(20px,3vw,29px); color:#344054; margin:0 0 18px; font-weight:650}
+    .lede{font-size:18px; color:var(--muted); max-width:720px}
+    .meta{display:flex; flex-wrap:wrap; gap:10px; margin-top:26px}
+    .pill{border:1px solid var(--line); background:var(--card); padding:8px 11px; border-radius:999px; font-size:14px}
+    .avatar{
+      width:min(250px,60vw); aspect-ratio:1; border-radius:32px; background:linear-gradient(145deg,#dbe7df,#f1eadf);
+      display:grid; place-items:center; margin:auto; box-shadow:0 18px 50px rgba(0,0,0,.06);
+      border:1px solid rgba(0,0,0,.04);
+    }
+    .avatar span{font-size:72px; font-weight:800; letter-spacing:-.08em; color:#405d4f}
+    section{padding:58px 0; border-top:1px solid var(--line)}
+    h2{font-size:30px; margin:0 0 12px; letter-spacing:-.025em}
+    .section-intro{color:var(--muted); max-width:760px; margin:0 0 28px}
+    .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+    .card{
+      background:var(--card); border:1px solid var(--line); border-radius:20px; padding:22px;
+      box-shadow:0 8px 24px rgba(0,0,0,.025);
+    }
+    .card h3{margin:0 0 8px; font-size:18px}
+    .card p{margin:0; color:var(--muted)}
+    .experience{display:grid; gap:18px}
+    .role{background:var(--card); border:1px solid var(--line); border-radius:22px; padding:26px}
+    .role-top{display:flex; justify-content:space-between; gap:20px; align-items:flex-start}
+    .role h3{margin:0; font-size:21px}
+    .company{color:var(--muted); margin-top:3px}
+    .date{white-space:nowrap; color:var(--muted); font-size:14px}
+    ul{padding-left:20px; margin:16px 0 0}
+    li{margin:7px 0}
+    .skills{display:flex; flex-wrap:wrap; gap:10px}
+    .skill{background:var(--card); border:1px solid var(--line); padding:9px 12px; border-radius:12px; font-size:14px}
+    .cta{
+      display:flex; gap:12px; flex-wrap:wrap; margin-top:26px
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:8px;
+      text-decoration:none; border-radius:12px; padding:11px 15px; font-weight:700; border:1px solid var(--line); background:var(--card)
+    }
+    .btn.primary{background:var(--text); color:white; border-color:var(--text)}
+    .learning{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+    .learning strong{display:block; margin-bottom:5px}
+    .contact-box{
+      background:#1f2328; color:white; border-radius:28px; padding:34px;
+    }
+    .contact-box p{color:#cfd4dc; max-width:700px}
+    .contact-links{display:flex; gap:12px; flex-wrap:wrap; margin-top:20px}
+    .contact-links a{background:white; color:#1f2328; text-decoration:none; font-weight:700; padding:10px 14px; border-radius:12px}
+    footer{padding:30px 0 46px; color:var(--muted); font-size:13px}
+    .note{font-size:13px; color:var(--muted); margin-top:14px}
+    @media (max-width:760px){
+      .hero{grid-template-columns:1fr}
+      .avatar{order:-1; width:150px; border-radius:24px; margin:0}
+      .avatar span{font-size:48px}
+      .grid,.learning{grid-template-columns:1fr}
+      .role-top{display:block}
+      .date{margin-top:6px}
+      nav .wrap{align-items:flex-start; padding-top:14px; padding-bottom:14px}
+      .navlinks{justify-content:flex-end}
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="wrap">
+      <a class="brand" href="#top">Jessy Huang</a>
+      <div class="navlinks">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#learning">Learning</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header id="top">
+    <div class="wrap hero">
+      <div>
+        <span class="eyebrow">Based in New Taipei City, Taiwan</span>
+        <h1>Jessy Huang</h1>
+        <p class="headline">Customer Support → Customer Success & AI Operations</p>
+        <p class="lede">
+          I’m a customer support professional with hands-on experience in international guest services,
+          digital platforms, and fast-paced operations. I’m now transitioning into SaaS, Customer Success,
+          and AI-related roles where I can combine customer empathy, problem-solving, and a strong willingness to learn.
+        </p>
+        <div class="meta">
+          <span class="pill">Chinese · Native</span>
+          <span class="pill">English · B1, actively improving</span>
+          <span class="pill">Open to remote & selected Taipei hybrid roles</span>
+        </div>
+        <div class="cta">
+          <a class="btn primary" href="mailto:j.huang.remote@gmail.com">Email me</a>
+          <a class="btn" href="https://linkedin.com/in/jessyhuang001" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </div>
+      <div class="avatar" aria-label="Jessy Huang initials placeholder">
+        <span>JH</span>
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="wrap">
+      <h2>What I bring</h2>
+      <p class="section-intro">
+        My background is in hospitality and customer-facing operations, but the core skills transfer naturally
+        into Customer Success, SaaS support, onboarding, and AI operations.
+      </p>
+      <div class="grid">
+        <div class="card">
+          <h3>Customer communication</h3>
+          <p>Supported domestic and international customers through email, messaging, phone, and in-person communication.</p>
+        </div>
+        <div class="card">
+          <h3>Digital systems</h3>
+          <p>Hands-on experience with Cloudbeds PMS, OTA platforms, booking workflows, payments, and operational tools.</p>
+        </div>
+        <div class="card">
+          <h3>Problem solving</h3>
+          <p>Used to resolving customer issues quickly, coordinating across teams, and keeping information accurate.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <h2>Experience</h2>
+      <p class="section-intro">Customer-facing work, digital operations, and international communication.</p>
+
+      <div class="experience">
+        <article class="role">
+          <div class="role-top">
+            <div>
+              <h3>Customer Support Specialist</h3>
+              <div class="company">Jiufen The Ocean Theory Homestay · New Taipei City, Taiwan</div>
+            </div>
+            <div class="date">Jul 2026 – Oct 2026</div>
+          </div>
+          <ul>
+            <li>Supported domestic and international customers across email, messaging platforms, phone, and online booking channels.</li>
+            <li>Managed reservations and customer data using Cloudbeds PMS and major OTA platforms including Booking.com, Agoda, Airbnb, and Expedia.</li>
+            <li>Resolved issues related to reservations, payments, check-in, and accommodation services.</li>
+            <li>Maintained reservation accuracy and updated booking and payment information across internal systems.</li>
+            <li>Coordinated with housekeeping and operations teams to resolve customer requests and ensure smooth service.</li>
+          </ul>
+        </article>
+
+        <article class="role">
+          <div class="role-top">
+            <div>
+              <h3>Guest Services & Operations Associate</h3>
+              <div class="company">Mu Xin Homestay · New Taipei City, Taiwan</div>
+            </div>
+            <div class="date">Nov 2025 – Jun 2026</div>
+          </div>
+          <ul>
+            <li>Managed guest check-in, check-out, payments, and daily account reconciliation.</li>
+            <li>Responded to guest inquiries via phone, messaging platforms, and in person.</li>
+            <li>Provided local travel recommendations and accommodation information.</li>
+            <li>Communicated with domestic and international guests, including English-speaking customers.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <h2>Skills & tools</h2>
+      <p class="section-intro">Tools I already use, plus capabilities I’m bringing into my next role.</p>
+      <div class="skills">
+        <span class="skill">Customer Support</span>
+        <span class="skill">Customer Success</span>
+        <span class="skill">Cloudbeds</span>
+        <span class="skill">Booking.com</span>
+        <span class="skill">Agoda</span>
+        <span class="skill">Airbnb</span>
+        <span class="skill">Expedia</span>
+        <span class="skill">Microsoft Excel</span>
+        <span class="skill">Google Workspace</span>
+        <span class="skill">ChatGPT</span>
+        <span class="skill">Cross-functional Collaboration</span>
+        <span class="skill">Problem Solving</span>
+        <span class="skill">Digital Product Support</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="learning">
+    <div class="wrap">
+      <h2>What I’m learning now</h2>
+      <p class="section-intro">I’m intentionally building the skills needed for a long-term career in technology.</p>
+      <div class="learning">
+        <div class="card">
+          <strong>Customer Success & SaaS</strong>
+          <p>Learning customer onboarding, SaaS workflows, product adoption, and customer lifecycle concepts.</p>
+        </div>
+        <div class="card">
+          <strong>AI tools & workflows</strong>
+          <p>Using AI tools for research, writing, problem solving, and improving everyday workflows.</p>
+        </div>
+        <div class="card">
+          <strong>English</strong>
+          <p>Taking online English lessons and actively improving communication for international work environments.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Education</h2>
+      <p><strong>Fine Arts Studies — Chung Hwa School of Arts</strong></p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact-box">
+        <h2>Let’s connect</h2>
+        <p>
+          I’m interested in entry-level and associate opportunities in Customer Success, Customer Support,
+          AI Operations, SaaS, onboarding, and digital customer experience.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:j.huang.remote@gmail.com">Email</a>
+          <a href="https://linkedin.com/in/jessyhuang001" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+        <div class="note">Resume and work samples can be added here after final review.</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">© 2026 Jessy Huang · Built as a simple GitHub Pages career site.</div>
+  </footer>
+</body>
+</html>
