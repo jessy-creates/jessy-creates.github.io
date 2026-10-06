@@ -53,10 +53,16 @@
     .lede{font-size:18px; color:var(--muted); max-width:720px}
     .meta{display:flex; flex-wrap:wrap; gap:10px; margin-top:26px}
     .pill{border:1px solid var(--line); background:var(--card); padding:8px 11px; border-radius:999px; font-size:14px}
-    .avatar{
+    .avatar img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}{
       width:min(250px,60vw); aspect-ratio:1; border-radius:32px; background:linear-gradient(145deg,#dbe7df,#f1eadf);
       display:grid; place-items:center; margin:auto; box-shadow:0 18px 50px rgba(0,0,0,.06);
       border:1px solid rgba(0,0,0,.04);
+      overflow:hidden;
     }
     .avatar span{font-size:72px; font-weight:800; letter-spacing:-.08em; color:#405d4f}
     section{padding:58px 0; border-top:1px solid var(--line)}
@@ -143,10 +149,9 @@
           <a class="btn primary" href="mailto:j.huang.remote@gmail.com">Email me</a>
           <a class="btn" href="https://linkedin.com/in/jessyhuang001" target="_blank" rel="noreferrer">LinkedIn</a>
         </div>
-      </div>
-      <div class="avatar" aria-label="Jessy Huang initials placeholder">
-        <span>JH</span>
-      </div>
+<div class="avatar">
+  <img src="profile.png" alt="Jessy Huang">
+</div>
     </div>
   </header>
 
