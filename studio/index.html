@@ -1,14 +1,41 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#151e34">
   <title>Jessy's Monster AI Studio</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="importmap">
+  {"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}
+  </script>
 </head>
 <body>
-  <h1>👾 Jessy's Monster AI Studio</h1>
-  <p>怪物 AI 辦公室正在建造中！</p>
+  <header class="topbar">
+    <a class="brand" href="../">✦ JESSY'S <span>MONSTER AI STUDIO</span></a>
+    <nav><a href="../">← 我的履歷</a><a href="#team">怪物團隊</a></nav>
+  </header>
+  <main>
+    <section class="intro">
+      <div><p class="eyebrow">THE LITTLE OFFICE OF BIG IDEAS · VERSION 1.0</p>
+        <h1>怪物們，<br><em>上班囉！</em> 👾</h1>
+        <p class="lead">大腳怪負責找工作，雪怪把關條件，沼澤怪物研究履歷，吸血鬼整理任務。歡迎來到我的 AI 實驗工作室。</p>
+        <div class="actions"><button id="start" class="primary">▶ 開始模擬求職任務</button><button id="reset">↻ 全員休息</button></div>
+        <p class="disclaimer">目前為可互動的 3D 展示版本，尚未串接 AI API 或真實職缺資料。</p>
+      </div>
+      <aside class="overview"><div class="over-title">MONSTER OPERATIONS</div><div class="big-number">04 <span>AGENTS</span></div><div class="mini-stat"><span class="pulse"></span><span id="overall">全部待命中</span></div><div class="line"></div><div class="small-label">目前工作階段</div><strong id="phase">等待任務</strong><div class="progress"><div id="bar"></div></div></aside>
+    </section>
+    <section class="office-card">
+      <div class="office-heading"><div><span class="eyebrow">LIVE OFFICE · 3D SCENE</span><h2>怪物事務所</h2></div><div class="office-tools"><button id="rotate" title="切換旋轉">⟳ 自動旋轉：關</button><button id="home" title="恢復視角">⌂ 重設視角</button></div></div>
+      <div id="scene" aria-label="可拖曳旋轉的 3D 怪物辦公室"><div class="loading">正在召喚怪物辦公室…</div></div>
+      <div class="scene-bottom"><span>🖱️ 拖曳旋轉 · 滾輪縮放 · 點擊怪物查看資訊</span><span id="scene-note">四隻怪物正在等待指令</span></div>
+    </section>
+    <section class="lower" id="team">
+      <div class="team"><div class="section-title"><p class="eyebrow">MEET THE CREW</p><h2>認識怪物員工</h2></div><div id="agents" class="agent-grid"></div></div>
+      <aside class="task-panel"><p class="eyebrow">TASK BOARD</p><h2>任務控制台</h2><p class="hint">點擊「開始模擬求職任務」，看怪物們依序接力。</p><div id="task-list"></div><button id="next" disabled>交接下一位怪物 →</button><div class="log"><strong>工作紀錄</strong><p id="log">還沒有任務。今天的咖啡很香。☕</p></div></aside>
+    </section>
+    <footer>Made with curiosity by Jessy · <a href="../">返回履歷網站</a> · <span>展示版，非即時 AI 服務</span></footer>
+  </main>
+  <script type="module" src="./app.js"></script>
 </body>
 </html>
-
