@@ -109,3 +109,12 @@ function resize(){const w=$('scene').clientWidth,h=$('scene').clientHeight;rende
 new ResizeObserver(resize).observe($('scene'));resize();
 const clock=new THREE.Clock();
 function animate(){requestAnimationFrame(animate);const t=clock.getElapsedTime();figures.forEach((f,i)=>{f.position.y=(i===current?.10:.015)*Math.sin(t*(i===current?6:1.5)+i);f.rotation.y=i===current?Math.sin(t*2)*.17:0;});controls.update();renderer.render(scene,camera);}animate();
+
+fetch('https://monster-ai-api.j-huang-remote.workers.dev/public-status')
+  .then(response => {
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    return response.json();
+  })
+  .then(data => console.log('👾 Monster API connected:', data))
+  .catch(error => console.error('👾 Monster API error:', error));
+
