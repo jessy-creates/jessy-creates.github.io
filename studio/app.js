@@ -114,6 +114,9 @@ const clock=new THREE.Clock();
 function animate(){requestAnimationFrame(animate);const t=clock.getElapsedTime();figures.forEach((f,i)=>{
 
  const working = liveStates[i] === 'working' || i === current;
+ if (i === 1 && Math.floor(t) % 5 === 0) {
+  console.log('❄️ Yeti 狀態:', liveStates[i], 'working:', working);
+}
  
  f.position.y= (working ? .10 : .015) *
   Math.sin(t * (working ? 6 : 1.5) + i);
