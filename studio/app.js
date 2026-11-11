@@ -6,9 +6,6 @@ const $ = id => document.getElementById(id);
 const status = ['待命中','工作中','已完成'];
 let current = -1, selected = -1, autoRotate = false;
 const figures = [], clickable = [];
-
-const liveStates = ['idle', 'idle', 'idle', 'idle'];
-
 const scene = new THREE.Scene();
 scene.background = new THREE.Color('#263852');
 const camera = new THREE.PerspectiveCamera(37,1,.1,100);
@@ -111,35 +108,4 @@ renderUI();
 function resize(){const w=$('scene').clientWidth,h=$('scene').clientHeight;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();}
 new ResizeObserver(resize).observe($('scene'));resize();
 const clock=new THREE.Clock();
-function animate(){requestAnimationFrame(animate);const t=clock.getElapsedTime();figures.forEach((f,i)=>{
-
- const working = liveStates[i] === 'working' || i === current;
- if (i === 1 && Math.floor(t) % 5 === 0) {
-  console.log('❄️ Yeti 狀態:', liveStates[i], 'working:', working);
-}
- 
- f.position.y= (working ? .10 : .015) *
-  Math.sin(t * (working ? 6 : 1.5) + i);
- 
- f.rotation.y= working ? Math.sin(t * 2) * .17 : 0;
-fetch('https://monster-ai-api.j-huang-remote.workers.dev/public-status')
-  .then(response => {
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    return response.json();
-  })
-  
-.then(data => {
-  console.log('👾 Monster API connected:', data);
-
-  const ids = ['bigfoot', 'yeti', 'swamp', 'vampire'];
-
-  ids.forEach((id, i) => {
-    const agent = data.agents.find(a => a.id === id);
-    liveStates[i] = agent?.status === 'working'
-      ? 'working'
-      : 'idle';
-  });
-})
-
-  .catch(error => console.error('👾 Monster API error:', error));
-
+function animate(){requestAnimationFrame(animate);const t=clock.getElapsedTime();figures.forEach((f,i)=>{f.position.y=(i===current?.10:.015)*Math.sin(t*(i===current?6:1.5)+i);f.rotation.y=i===current?Math.sin(t*2)*.17:0;});controls.update();renderer.render(scene,camera);}animate();
